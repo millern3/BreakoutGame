@@ -12,6 +12,13 @@ public class Ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(transform.position.y < -5.8f) {
+            GetOut();
+        }
 	}
+
+    void GetOut()
+    {
+        Debug.Log("You are out");
+    }
 }
