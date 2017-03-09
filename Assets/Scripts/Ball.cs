@@ -6,7 +6,8 @@ public class Ball : MonoBehaviour {
 
     public Vector2 startingVelocity = new Vector2(15, -20);
     private Vector3 startingPosition;
-    public GameObject gameOver;
+    public GameObject gameOverSign;
+    public GameObject youWinSign;
 
     int lives = 3;
 	// Use this for initialization
@@ -40,6 +41,14 @@ public class Ball : MonoBehaviour {
 
     void DoGameOver()
     {
-              gameOver.SetActive(true);
+        gameOverSign.SetActive(true);
+    }
+    public void BrickBroken()
+    {
+        var bricksLeft = FindObjectsOfType<Brick>().Length;
+        if(bricksLeft == 0)
+        {
+            youWinSign.SetActive(true);
+        }
     }
 }
