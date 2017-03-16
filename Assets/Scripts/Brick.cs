@@ -22,9 +22,9 @@ public class Brick : MonoBehaviour {
         if (Strength == 0) ;
         {
             gameObject.SetActive(false);
-            FindObjectOfType<Ball>().BrickBroken(points);//worth(from ball script) = points(in this script)
-            FindObjectOfType<Ball2>().BrickSmash();
-            FindObjectOfType<Ball3>().BrickBroken3();
+            FindObjectOfType<Ball>().BrickBroken(points); //worth(from ball script) = points(in this script)
+            FindObjectOfType<Ball2>().BrickSmash(points);
+            FindObjectOfType<Ball3>().BrickBroken3(points);
         }
     }
 }

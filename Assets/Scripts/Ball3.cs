@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,6 +34,12 @@ public class Ball3 : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = startingVelocity;
         }
 	}
+
+    internal void BrickBroken3(int points)
+    {
+        throw new NotImplementedException();
+    }
+
     void GetOut()
     {
         Debug.Log("You are out");
