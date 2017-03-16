@@ -51,7 +51,7 @@ public class Ball3 : MonoBehaviour {
     {
         gameOverSign.SetActive(true);
     }
-    public void BrickBroken()
+    public void BrickBroken3()
     {
         points += 1;
         pointsValue.text = points.ToString();

@@ -50,9 +50,9 @@ public class Ball : MonoBehaviour {
     {
         gameOverSign.SetActive(true);
     }
-    public void BrickBroken()
+    public void BrickBroken(int worth)
     {
-        points += 1;
+        points += worth;
         pointsValue.text = points.ToString();
 
         var bricksLeft = FindObjectsOfType<Brick>().Length;
