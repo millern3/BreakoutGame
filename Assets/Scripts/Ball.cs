@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour {
     public GameObject youWinSign;
     public Text livesValue;
     public Text pointsValue;
-
+    public float belowThePaddle = -5.7f;
     int lives = 3;
     int points = 0;
 
@@ -24,7 +24,7 @@ public class Ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(transform.position.y < -5.7f) {
+		if(transform.position.y < belowThePaddle) {
             GetOut();
         }
         if (Input.GetButtonDown("Jump")) {
